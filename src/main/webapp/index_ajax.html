@@ -1,0 +1,42 @@
+<html>
+<head>
+
+    <script>
+
+       function sendValues(param){
+             xmlHttp = new XMLHttpRequest();
+             xmlHttp.onreadystatechange=callback;
+             var url ="operatiiMatematiceAjax"+"?nr1="+document.getElementById("nr1").value+"&nr2="+document.getElementById("nr2").value+"&op="+param;
+             xmlHttp.open("GET",url,true);
+             xmlHttp.send();
+         }
+
+         function callback() {
+             if(xmlHttp.readyState==4 && xmlHttp.status==200) {
+                 var value = xmlHttp.responseText;
+                 document.getElementById("resultArea").innerHTML = value;
+                }
+                }
+
+    </script>
+
+</head>
+
+
+<br>
+<h2>Basic Math!</h2>
+
+
+    Nr1:<input type="text" name="nr1" id="nr1" /></br>
+    Nr2:<input type="text" name="nr2" id="nr2" /></br>
+
+    <input type="button" name="a" id="a" value="+" onclick="sendValues(1)"/>&nbsp;
+    <input type="button" name="s" id="a" value="-" onclick="sendValues(2)"/>&nbsp;
+    <input type="button" name="in" id="in" value="*" onclick="sendValues(3)"/>&nbsp;
+    <input type="button" name="im" id="im" value="/" onclick="sendValues(4)"/>&nbsp;
+
+
+</br>
+<div id="resultArea"></div>
+</body>
+</html>

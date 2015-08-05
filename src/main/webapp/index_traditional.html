@@ -1,0 +1,42 @@
+<html>
+<head>
+
+    <script>
+
+    function setOp(param)
+    {
+        if(param==1)
+         f.op.value=1;
+
+        if(param==2)
+         f.op.value=2;
+
+         if(param==3)
+         f.op.value=3;
+
+         if(param==4)
+         f.op.value=4;
+
+        f.submit();
+    }
+
+    </script>
+
+</head>
+
+
+<body>
+<h2>Basic Math!</h2>
+
+<form name="f" action="operatiiMatematiceTraditional">
+    Nr1:<input type="text" name="nr1" id="nr1"/></br>
+    Nr2:<input type="text" name="nr2" id="nr2"/></br>
+    <input type="hidden" name="op" id="op"/>
+    <input type="button" name="a" id="a" value="+" onclick="setOp(1)"/>&nbsp;
+    <input type="button" name="s" id="a" value="-" onclick="setOp(2)"/>&nbsp;
+    <input type="button" name="in" id="in" value="*" onclick="setOp(3)"/>&nbsp;
+    <input type="button" name="im" id="im" value="/" onclick="setOp(4)"/>&nbsp;
+
+</form>
+</body>
+</html>
