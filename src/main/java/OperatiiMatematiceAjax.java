@@ -1,11 +1,12 @@
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-
+@WebServlet("/operatiiMatematiceAjax")
 public class OperatiiMatematiceAjax extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -20,21 +21,24 @@ public class OperatiiMatematiceAjax extends HttpServlet {
         int nr2=Integer.parseInt(sNr2);
         double resultValue=0;
 
-        if(sOp.equals("1"))
-            resultValue=nr1+nr2;
-      else
-        if(sOp.equals("2"))
-            resultValue=nr1-nr2;
-        else
-        if(sOp.equals("3"))
-            resultValue=nr1*nr2;
-        else
-        if(sOp.equals("4"))
-            resultValue=(double)nr1/nr2;
+        switch (sOp) {
+            case "1":
+                resultValue = nr1 + nr2;
+                break;
+            case "2":
+                resultValue = nr1 - nr2;
+                break;
+            case "3":
+                resultValue = nr1 * nr2;
+                break;
+            case "4":
+                resultValue = (double) nr1 / nr2;
+                break;
+        }
 
 
 
-        out.println("rezultatul este: <b>"+resultValue+"</b>");
+        out.println("result is here: <b>"+resultValue+"</b>");
 
         out.close();
 
