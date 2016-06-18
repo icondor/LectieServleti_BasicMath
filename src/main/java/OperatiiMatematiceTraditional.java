@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet("/operatiiMatematiceTraditional")
 public class OperatiiMatematiceTraditional extends HttpServlet {
@@ -40,7 +42,6 @@ public class OperatiiMatematiceTraditional extends HttpServlet {
         }
 
 
-
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Calcule </title>");
@@ -49,12 +50,24 @@ public class OperatiiMatematiceTraditional extends HttpServlet {
         out.println("<body>");
 
 
+
+
+
         out.println("result is: <b>"+resultValue+"</b>");
+        out.println("result is: <b>"+resultValue+"</b>");
+        out.println("result is: <b>"+resultValue+"</b>");
+        out.println("result is: <b>"+resultValue+"</b>");
+        out.println("result is: <b>"+resultValue+"</b>");
+
 
         out.close();
 
 
 
         out.println("</body>");
+
+        DB d = new DB();
+        d.insert(resultValue);
+
     }
 }
