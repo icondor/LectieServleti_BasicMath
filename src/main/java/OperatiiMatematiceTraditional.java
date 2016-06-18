@@ -53,11 +53,8 @@ public class OperatiiMatematiceTraditional extends HttpServlet {
 
 
 
-        out.println("result is: <b>"+resultValue+"</b>");
-        out.println("result is: <b>"+resultValue+"</b>");
-        out.println("result is: <b>"+resultValue+"</b>");
-        out.println("result is: <b>"+resultValue+"</b>");
-        out.println("result is: <b>"+resultValue+"</b>");
+        out.println("result iss: <b>"+resultValue+"</b>");
+
 
 
         out.close();

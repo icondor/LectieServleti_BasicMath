@@ -13,6 +13,9 @@ import java.util.List;
  */
 @WebServlet("/readFromDB")
 public class ReadFromDB extends HttpServlet {
+
+
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
